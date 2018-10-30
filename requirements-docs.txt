@@ -1,1 +1,1 @@
-<PYPI_NAME>[doc]
+devcon-iv-ethpm[doc]

@@ -1,0 +1,33 @@
+{
+	"language": "Solidity",
+	"sources": {
+		"IndexedOrderedSetLib.sol": {
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/IndexedOrderedSetLib.sol"]
+		},
+		"Owned.sol": {
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/Owned.sol"]
+		},
+		"PackageDB.sol": {
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/PackageDB.sol"]
+		},
+		"PackageRegistry.sol": {
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/PackageRegistry.sol"]
+		},
+		"PackageRegistryInterface.sol": {
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/PackageRegistryInterface.sol"]
+		},
+		"ReleaseDB.sol": {
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/ReleaseDB.sol"]
+		},
+		"ReleaseValidator.sol": {
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/ReleaseValidator.sol"]
+		}
+	},
+	"settings": {
+		"outputSelection": {
+			"*": {
+				"*": ["abi", "evm.bytecode.object", "evm.deployedBytecode"]
+			}
+		}
+	}
+}

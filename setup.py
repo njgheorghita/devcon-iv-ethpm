@@ -36,22 +36,24 @@ extras_require['dev'] = (
 )
 
 setup(
-    name='<PYPI_NAME>',
+    name='devcon-iv-ethpm',
     # *IMPORTANT*: Don't manually change the version here. Use `make bump`, as described in readme
     version='0.1.0-alpha.0',
-    description="""<PYPI_NAME>: <SHORT_DESCRIPTION>""",
+    description="""devcon-iv-ethpm: Starter repo for the devcon iv ethpm workshop.""",
     long_description_markdown_filename='README.md',
-    author='Jason Carver',
-    author_email='ethcalibur+pip@gmail.com',
-    url='https://github.com/ethereum/<REPO_NAME>',
+    author='Nick Gheorghita',
+    author_email='nickg@ethereum.org',
+    url='https://github.com/ethereum/devcon-iv-ethpm',
     include_package_data=True,
     install_requires=[
         "eth-utils>=1,<2",
+        "ethpm>=0.1.4a1,<1",
+        "pytest-ethereum>=0.1.3a1,<1",
     ],
     setup_requires=['setuptools-markdown'],
     python_requires='>=3.5, <4',
     extras_require=extras_require,
-    py_modules=['<MODULE_NAME>'],
+    py_modules=['devcon-iv-ethpm'],
     license="MIT",
     zip_safe=False,
     keywords='ethereum',

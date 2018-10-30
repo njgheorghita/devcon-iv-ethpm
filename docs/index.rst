@@ -1,7 +1,7 @@
-<PROJECT_NAME>
+devcon-iv-ethpm
 ==============================
 
-<SHORT_DESCRIPTION>
+Starter repo for the devcon iv ethpm workshop.
 
 Contents
 --------
@@ -9,7 +9,7 @@ Contents
 .. toctree::
     :maxdepth: 3
 
-    <MODULE_NAME>
+    devcon-iv-ethpm
     releases
 
 
