@@ -1,0 +1,18 @@
+{
+	"language": "Solidity",
+	"sources": {
+		"ContractOne.sol": {
+			"urls": ["absolute/path/to/ContractOne.sol"]
+		},
+		"ContractTwo.sol": {
+			"urls": ["absolute/path/to/ContractTwo.sol"]
+		}
+	},
+	"settings": {
+		"outputSelection": {
+			"*": {
+				"*": ["abi", "evm.bytecode.object", "evm.deployedBytecode"]
+			}
+		}
+	}
+}

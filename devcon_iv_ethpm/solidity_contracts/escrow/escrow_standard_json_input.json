@@ -1,0 +1,18 @@
+{
+	"language": "Solidity",
+	"sources": {
+		"SafeSendLib.sol": {
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/escrow/SafeSendLib.sol"]
+		},
+		"Escrow.sol": {
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/escrow/Escrow.sol"]
+		}
+	},
+	"settings": {
+		"outputSelection": {
+			"*": {
+				"*": ["abi", "evm.bytecode.object", "evm.deployedBytecode"]
+			}
+		}
+	}
+}
