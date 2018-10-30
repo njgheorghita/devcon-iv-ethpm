@@ -26,6 +26,7 @@ w3.eth.defaultAccount = to_checksum_address(ACCOUNT_ADDRESS)
 
 # continue escrow example? 
 # show off some linking?
+# and explain the linkable contract
 
 ENS = w3.ens.fromWeb3(w3, to_checksum_address("0x112234455c3a32fd11230c42e7bccd4a84e02010"))
 

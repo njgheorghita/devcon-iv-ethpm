@@ -51,7 +51,7 @@ setup(
         "pytest-ethereum>=0.1.3a1,<1",
     ],
     setup_requires=['setuptools-markdown'],
-    python_requires='>=3.5, <4',
+    python_requires='>=3.6, <4',
     extras_require=extras_require,
     py_modules=['devcon-iv-ethpm'],
     license="MIT",
@@ -64,8 +64,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: Implementation :: PyPy',
     ],
 )
