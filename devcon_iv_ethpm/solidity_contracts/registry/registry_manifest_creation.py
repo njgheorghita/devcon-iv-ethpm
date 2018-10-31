@@ -6,29 +6,6 @@ from ethpm.backends.ipfs import InfuraIPFSBackend
 from pytest_ethereum.plugins import twig_manifest
 
 
-# CREATE A MANIFEST FROM YOUR SOLIDITY / VYPER CONTRACTS
-
-# SOLIDITY
-
-# Step 1: Compile the contracts
-# Contracts -> SOLC output
-
-# Ingredients
-# create a new directory with your package name under `devcon_iv_ethpm/solidity_contracts/`
-# Copy and paste your contracts into the directory you just created
-# Adjust `/devcon_iv_ethpm/solidity_contracts/sample_solc_standard_json_input.json` to suit your needs (XXX) what to fill in
-
-
-# TO CREATE YOUR OWN SOLC OUTPUT
-# .. instructions .. 
-# once everything (contracts/solc_output) is in place
-
-# solc --allow-paths <path-to-contract-directory> --standard-json < standard-json-input.json > owned_compiler_output.json
-
-
-
-# COMPILER_OUTPUT_PATH = Path(__file__).parent / 'solidity' / '<solc_output_file_name_here>.json'
-
 SOLIDITY_FOLDER = Path(__file__).parent / 'solidity_contracts' / 'registry'
 COMPILER_OUTPUT_PATH = SOLIDITY_FOLDER / 'registry_output.json'
 

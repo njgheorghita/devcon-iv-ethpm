@@ -2,10 +2,10 @@
 	"language": "Solidity",
 	"sources": {
 		"SafeSendLib.sol": {
-			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/escrow/SafeSendLib.sol"]
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/escrow/contracts/SafeSendLib.sol"]
 		},
 		"Escrow.sol": {
-			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/escrow/Escrow.sol"]
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/escrow/contracts/Escrow.sol"]
 		}
 	},
 	"settings": {
