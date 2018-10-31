@@ -2,25 +2,25 @@
 	"language": "Solidity",
 	"sources": {
 		"IndexedOrderedSetLib.sol": {
-			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/IndexedOrderedSetLib.sol"]
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/contracts/IndexedOrderedSetLib.sol"]
 		},
 		"Owned.sol": {
-			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/Owned.sol"]
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/contracts/Owned.sol"]
 		},
 		"PackageDB.sol": {
-			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/PackageDB.sol"]
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/contracts/PackageDB.sol"]
 		},
 		"PackageRegistry.sol": {
-			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/PackageRegistry.sol"]
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/contracts/PackageRegistry.sol"]
 		},
 		"PackageRegistryInterface.sol": {
-			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/PackageRegistryInterface.sol"]
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/contracts/PackageRegistryInterface.sol"]
 		},
 		"ReleaseDB.sol": {
-			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/ReleaseDB.sol"]
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/contracts/ReleaseDB.sol"]
 		},
 		"ReleaseValidator.sol": {
-			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/ReleaseValidator.sol"]
+			"urls": ["/Users/nickgheorghita/ethereum/devcon-iv-ethpm/devcon_iv_ethpm/solidity_contracts/registry/contracts/ReleaseValidator.sol"]
 		}
 	},
 	"settings": {

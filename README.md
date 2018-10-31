@@ -20,14 +20,17 @@ pip install -e .[dev]
 pip install --upgrade --force-reinstall git+https://github.com/ethereum/web3.py@pm-api
 ```
 
-To interact with an on-chain registry, you must fill in these three variables in `devcon_iv_ethpm/constants.py`.
+To interact with an on-chain registry, you must fill in these three variables in `devcon_iv_ethpm/constants.py`. If you do not have an Infura API key for Ropsten, you can sign up for one [here](https://infura.io). If you do not have a Ropsten account, you can use [MetaMask](https://metamask.io) to set one up, which will also generate a private key for you to use. If you do not have any Ropsten testnet ether, you can acquire some via this [faucet](https://faucet.ropsten.be/)
+
+Both `ROPSTEN_ACCOUNT_ADDRESS` and `ACCOUNT_PRIVATE_KEY` should be filled in as 0x prefixed hex strings.
 
 ```
 INFURA_ROPSTEN_API_KEY =
-ACCOUNT_ADDRESS =
-PRIVATE_KEY = 
+ROPSTEN_ACCOUNT_ADDRESS =
+ACCOUNT_PRIVATE_KEY = 
 ```
 
+If you want to generate a manifest for solidity contracts, you must also have the solidity compiler installed on your machine. [Installation Guide](https://solidity.readthedocs.io/en/v0.4.24/installing-solidity.html).
 
 # DEVS!!
 
