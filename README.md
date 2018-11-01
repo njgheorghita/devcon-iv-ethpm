@@ -20,19 +20,25 @@ pip install -e .[dev]
 pip install --upgrade --force-reinstall git+https://github.com/ethereum/web3.py@pm-api
 ```
 
-To interact with an on-chain registry, you must fill in these three variables in `devcon_iv_ethpm/constants.py`. If you do not have an Infura API key for Ropsten, you can sign up for one [here](https://infura.io). If you do not have a Ropsten account, you can use [MetaMask](https://metamask.io) to set one up, which will also generate a private key for you to use. If you do not have any Ropsten testnet ether, you can acquire some via this [faucet](https://faucet.ropsten.be/)
+To interact with an on-chain registry, you must fill in the `ACCOUNT_PRIVATE_KEY` variable in `devcon_iv_ethpm/constants.py`. 
 
-Both `ROPSTEN_ACCOUNT_ADDRESS` and `ACCOUNT_PRIVATE_KEY` should be filled in as 0x prefixed hex strings.
+If you have a paper wallet:
+- Go to [www.webqr.com](webqr.com).
+- Give permission for site to access your webcam
+- Scan your qr code
+- Copy and paste your private key into the `ACCOUNT_PRIVATE_KEY` constant in `devcon_iv_ethpm/constants.py`.
+- PLEASE NOT THAT THIS IS NOT A SECURE ACCOUNT, AND SHOULD NOT BE USED TO STORE REAL MAINNET ETH
 
-```
-INFURA_ROPSTEN_API_KEY =
-ROPSTEN_ACCOUNT_ADDRESS =
-ACCOUNT_PRIVATE_KEY = 
-```
+If you want to use your metamask account:
+- Copy your private key (for Ropsten network)
+- Copy and paste your private key into the `ACCOUNT_PRIVATE_KEY` constant in `devcon_iv_ethpm/constants.py`.
+- Be careful not to commit / push this private key to github if you use it on the mainnet.
+
+`ACCOUNT_PRIVATE_KEY` should be filled in as 0x prefixed hex strings.
 
 If you want to generate a manifest for solidity contracts, you must also have the solidity compiler installed on your machine. [Installation Guide](https://solidity.readthedocs.io/en/v0.4.24/installing-solidity.html).
 
-# DEVS!!
+# OPEN CALL FOR DEVS
 
 If you would like to hack on other Python projects in the Ethereum ecosystem, please check out the
 [Ethereum Development Tactical Manual](https://github.com/pipermerriam/ethereum-dev-tactical-manual)
