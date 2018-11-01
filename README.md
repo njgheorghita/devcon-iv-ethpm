@@ -23,7 +23,7 @@ pip install --upgrade --force-reinstall git+https://github.com/ethereum/web3.py@
 To interact with an on-chain registry, you must fill in the `ACCOUNT_PRIVATE_KEY` variable in `devcon_iv_ethpm/constants.py`. 
 
 If you have a paper wallet:
-- Go to [webqr](https://www.webqr.com).
+- Go to [webqr](http://www.webqr.com).
 - Give permission for site to access your webcam
 - Scan your qr code
 - Copy and paste your private key into the `ACCOUNT_PRIVATE_KEY` constant in `devcon_iv_ethpm/constants.py`.
