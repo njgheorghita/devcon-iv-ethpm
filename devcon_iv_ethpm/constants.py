@@ -4,10 +4,6 @@ from web3.auto.infura.ropsten import w3
 from eth_account import Account
 
 
-ACCOUNT_PRIVATE_KEY = (
-    "0xC7E9110E69ACA7BA60DB396F8272B58763B0D576EB4233F809FD0E08AA3EFEBB"
-)
-
 # 📦📦📦
 # if you have a paper wallet (NOT SECURE - don't use to store real eth!)
 # --------------------------
@@ -17,7 +13,7 @@ ACCOUNT_PRIVATE_KEY = (
 # -----------------
 # copy your private key - and paste it below
 
-# ACCOUNT_PRIVATE_KEY = "0x6b51817ef7c1bc670db76f609a0a47c7..."
+ACCOUNT_PRIVATE_KEY = "0x6b51817ef7c1b..."
 ROPSTEN_ACCOUNT_ADDRESS = Account.privateKeyToAccount(ACCOUNT_PRIVATE_KEY).address
 
 
