@@ -1,5 +1,5 @@
 from pathlib import Path
-from eth_utils import to_checksum_address, to_hex
+from eth_utils import to_checksum_address, to_hex, to_canonical_address
 from ens import ENS
 from web3.auto.infura.ropsten import w3
 from web3.pm import PM
@@ -38,24 +38,15 @@ def tie_registry_to_ens(ens_name, registry_address, w3):
             "type": "function",
         }
     ]
-    reg = w3.eth.contract(address=reg_addr, abi=reg_abi)
+    reg = w3.eth.contract(address=to_canonical_address(reg_addr), abi=reg_abi)
     my_hash = rns.labelhash(ens_name)
     nonce_1 = w3.eth.getTransactionCount(ROPSTEN_ACCOUNT_ADDRESS)
     txn_1 = reg.functions.register(my_hash, ROPSTEN_ACCOUNT_ADDRESS).transact()
-    # .buildTransaction({
-    #     'chainId': 3,
-    # 'gas': 300000,
-    # 'gasPrice': w3.toWei('10', 'gwei'),
-    # 'nonce': nonce_1,
-    # })
-    # signed_txn_1 = w3.eth.account.signTransaction(txn_1, ACCOUNT_PRIVATE_KEY)
-    # Broadcast your transaction
-    # tx1_hash = w3.eth.sendRawTransaction(signed_txn_1.rawTransaction)
     print("waiting to mine tx 1", to_hex(txn_1))
     w3.eth.waitForTransactionReceipt(txn_1)
     print("tx1 mined")
 
-    resolver_addr = rns.address("resolver.eth")
+    resolver_addr = to_canonical_address(rns.address("resolver.eth"))
     raw_ens = rns.ens._classic_contract
     nonce_2 = w3.eth.getTransactionCount(ROPSTEN_ACCOUNT_ADDRESS)
     txn_2 = raw_ens.functions.setResolver(
@@ -110,4 +101,4 @@ def tie_registry_to_ens(ens_name, registry_address, w3):
     print("tx mined 3")
 
     if registry_address == rns.address(ens_domain):
-        print("changeXXX")
+        print("Congrats!")
