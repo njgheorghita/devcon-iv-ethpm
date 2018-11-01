@@ -21,6 +21,7 @@ def ropsten_ens_w3():
 
 
 def tie_registry_to_ens(ens_name, registry_address, w3):
+    print("ENS setup")
     ens_domain = ens_name + ".test"
     rns = w3.ens
     reg_addr = rns.address("test")
