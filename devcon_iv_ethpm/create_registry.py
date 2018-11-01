@@ -1,44 +1,29 @@
-import json
-from pathlib import Path
-import os
-from eth_utils import is_address, to_hex, to_bytes
-import ethpm
-from web3.auto.infura.ropsten import w3
-from web3.pm import PM
-from devcon_iv_ethpm.constants import (
-    INFURA_ROPSTEN_API_KEY,
-    REGISTRY_ABI,
-    REGISTRY_BYTECODE,
-)
+from eth_utils import to_hex
+from devcon_iv_ethpm.constants import VYPER_REGISTRY_MANIFEST
+from ethpm import Package
+from devcon_iv_ethpm.setup import ropsten_ens_w3, tie_registry_to_ens
 
-
-# Setup
-os.environ['WEB3_INFURA_API_KEY'] = INFURA_ROPSTEN_API_KEY
 
 # Create your registry contract factory
-registry = w3.eth.contract(abi=REGISTRY_ABI, bytecode=REGISTRY_BYTECODE)
-
-# Build your transaction to deploy the registry
-nonce = w3.eth.getTransactionCount(ACCOUNT_ADDRESS)
-registry_txn = registry.constructor().buildTransaction({
-    'chainId': 3,
-    'gas': 3000000,
-    'gasPrice': w3.toWei('10', 'gwei'),
-    'nonce': nonce,
-})
-signed_txn = w3.eth.account.signTransaction(registry_txn, PRIVATE_KEY)
-
-# Broadcast your transaction
-tx_hash = w3.eth.sendRawTransaction(signed_txn.rawTransaction)
-
-##
-#
-# ENS steal from carver
-# test ens for play_with_registry
-#
+w3 = ropsten_ens_w3()
+registry_package = Package(VYPER_REGISTRY_MANIFEST, w3)
+registry_factory = registry_package.get_contract_factory("registry")
 
 
-print("Transaction: {0} created".format(to_hex(tx_hash)))
-tx_receipt = w3.eth.waitForTransactionReceipt(tx_hash)
+# Deploy the registry
+registry_txn = registry_factory.constructor().transact()
+
+
+print("Transaction: {0} created".format(to_hex(registry_txn)))
+tx_receipt = w3.eth.waitForTransactionReceipt(registry_txn)
 registry_address = tx_receipt.contractAddress
 print("Registry created at address: {0}".format(registry_address))
+
+
+# to tie your registry to an ens name of your choice - fill in the variable ENS_NAME below
+#   - do *not* include a tld in your name (i.e '.test' / '.eth')
+#   - the `tie_registry_to_ens` function will automatically add '.test' to your ens name
+
+# Be sure to save the contract address generated above and ens name used here, they will be used later
+ENS_NAME = "ENSNAMEHERE"
+tie_registry_to_ens(ENS_NAME, registry_address, w3)

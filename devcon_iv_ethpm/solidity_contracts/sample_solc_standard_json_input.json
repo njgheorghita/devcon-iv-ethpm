@@ -2,10 +2,10 @@
 	"language": "Solidity",
 	"sources": {
 		"ContractOne.sol": {
-			"urls": ["absolute/path/to/ContractOne.sol"]
+			"urls": ["/absolute/path/to/ContractOne.sol"]
 		},
 		"ContractTwo.sol": {
-			"urls": ["absolute/path/to/ContractTwo.sol"]
+			"urls": ["/absolute/path/to/ContractTwo.sol"]
 		}
 	},
 	"settings": {
