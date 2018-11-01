@@ -12,7 +12,7 @@ Must have python >= 3.6 installed on your machine.
 You can set up your dev environment with:
 
 ```sh
-git clone git@github.com:ethereum/devcon-iv-ethpm.git
+git clone https://github.com/njgheorghita/devcon-iv-ethpm.git
 cd devcon-iv-ethpm
 python3 -m venv venv
 . venv/bin/activate
@@ -23,7 +23,7 @@ pip install --upgrade --force-reinstall git+https://github.com/ethereum/web3.py@
 To interact with an on-chain registry, you must fill in the `ACCOUNT_PRIVATE_KEY` variable in `devcon_iv_ethpm/constants.py`. 
 
 If you have a paper wallet:
-- Go to [www.webqr.com](webqr.com).
+- Go to [www.webqr.com](www.webqr.com).
 - Give permission for site to access your webcam
 - Scan your qr code
 - Copy and paste your private key into the `ACCOUNT_PRIVATE_KEY` constant in `devcon_iv_ethpm/constants.py`.
@@ -37,6 +37,10 @@ If you want to use your metamask account:
 `ACCOUNT_PRIVATE_KEY` should be filled in as 0x prefixed hex strings.
 
 If you want to generate a manifest for solidity contracts, you must also have the solidity compiler installed on your machine. [Installation Guide](https://solidity.readthedocs.io/en/v0.4.24/installing-solidity.html).
+
+If you run into this error:
+SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED]
+run this: `/Applications/Python\ 3.7/Install\ Certificates.command`
 
 # OPEN CALL FOR DEVS
 
