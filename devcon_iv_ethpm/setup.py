@@ -102,3 +102,4 @@ def tie_registry_to_ens(ens_name, registry_address, w3):
 
     if registry_address == rns.address(ens_domain):
         print("Congrats!")
+        print("Registry @ address: {0} tied to ENS name: {1}.".format(registry_address, ens_domain))

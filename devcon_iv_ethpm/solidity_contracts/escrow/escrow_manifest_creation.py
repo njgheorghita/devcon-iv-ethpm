@@ -82,7 +82,7 @@ manifest = b.build(
     # contract_type='SafeSendLib',
     # address=to_canonical_address('0x4f5b11c860b37b68de6d14fb7e7b5f18a9a1bd00'),
     # ),
-    b.validate()
+    b.validate(),
     # b.write_to_disk(
     # manifest_root_dir: Optional[Path],
     # manifest_name: Optional[str],
@@ -90,7 +90,7 @@ manifest = b.build(
     # )
     # MUST BE FINAL BUILDER FN
     # b.as_package(w3)
-    # b.pin_to_ipfs(backend=infura_backend),
+    # b.pin_to_ipfs(backend=ipfs_backend),
 )
 
 print("")
